@@ -25,4 +25,5 @@ test:
 
 production:
   adapter: mysql2
-  database: db/production.sqlite3
+  database: school_system
+  socket: /var/lib/mysqld/mysqld.sock
