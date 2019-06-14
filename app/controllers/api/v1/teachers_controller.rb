@@ -5,12 +5,12 @@ class Api::V1::TeachersController < ApplicationController
   def index
     @teachers = Teacher.all
 
-    render json: @teachers
+    render json: TeacherSerializer.new(@teachers).serialized_json
   end
 
   # GET /teachers/1
   def show
-    render json: @teacher
+    render json: TeacherSerializer.new(@teacher).serialized_json
   end
 
   # POST /teachers
@@ -18,7 +18,7 @@ class Api::V1::TeachersController < ApplicationController
     @teacher = Teacher.new(teacher_params)
 
     if @teacher.save
-      render json: @teacher, status: :created
+      render json: TeacherSerializer.new(@teacher).serialized_json, status: :created
     else
       render json: @teacher.errors, status: :unprocessable_entity
     end
@@ -27,7 +27,7 @@ class Api::V1::TeachersController < ApplicationController
   # PATCH/PUT /teachers/1
   def update
     if @teacher.update(teacher_params)
-      render json: @teacher
+      render json: TeacherSerializer.new(@teacher).serialized_json
     else
       render json: @teacher.errors, status: :unprocessable_entity
     end
