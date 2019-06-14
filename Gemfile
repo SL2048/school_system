@@ -10,6 +10,8 @@ gem 'mysql2', '~> 0.3.18'
 gem 'puma', '~> 3.0'
 
 gem 'fast_jsonapi'
+
+gem 'sidekiq', '~> 4.1', '>= 4.1.2'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
