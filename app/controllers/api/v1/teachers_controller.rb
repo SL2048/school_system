@@ -46,6 +46,6 @@ class Api::V1::TeachersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def teacher_params
-      params.require(:teacher).permit(:name, :salary, :subject)
+      params.require(:teacher).permit(:name, :salary, :subject, course_ids: [])
     end
 end
