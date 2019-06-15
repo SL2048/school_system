@@ -1,25 +1,47 @@
 # school_system
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+the link for the deployed api: https://pacific-sea-59473.herokuapp.com
 
-Things you may want to cover:
+# Api gates
 
-* Ruby version
+Admin :- 
+-----------------------------------------------------
 
-* System dependencies
+sign up:
+  method: POST
+  path:   /auth
+  body:   [email, password, password_confirmation]
 
-* Configuration
+for sign in:
+  method: POST
+  path:   /auth/sign_in
+  body:   [email, password]
+  
+-----------------------------------------------------
 
-* Database creation
 
-* Database initialization
+Teacher :-
+-----------------------------------------------------
 
-* How to run the test suite
+defined as an api reasource under the path /api/v1
+header: [access-token, client, uid]
 
-* Services (job queues, cache servers, search engines, etc.)
+-----------------------------------------------------
 
-* Deployment instructions
 
-* ...
-# school_system
+Student :-
+-----------------------------------------------------
+
+defined as an api reasource under the path /api/v1
+header: [access-token, client, uid]
+
+-----------------------------------------------------
+
+
+Course :-
+-----------------------------------------------------
+
+defined as an api reasource under the path /api/v1
+header: [access-token, client, uid]
+
+-----------------------------------------------------
