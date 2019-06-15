@@ -39,9 +39,19 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
+    bcrypt (3.1.13)
     builder (3.2.3)
     concurrent-ruby (1.1.5)
     connection_pool (2.2.2)
+    devise (4.6.2)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 6.0)
+      responders
+      warden (~> 1.2.3)
+    devise_token_auth (1.1.0)
+      devise (> 3.5.2, < 4.7)
+      rails (>= 4.2.0, < 6)
     erubis (2.7.0)
     fast_jsonapi (1.5)
       activesupport (>= 4.2)
@@ -60,6 +70,8 @@ GEM
     nio4r (1.2.1)
     nokogiri (1.6.8.1-x86-mingw32)
       mini_portile2 (~> 2.1.0)
+    orm_adapter (0.5.0)
+    pg (1.1.4-x86-mingw32)
     puma (3.12.1)
     rack (2.0.7)
     rack-protection (2.0.5)
@@ -91,6 +103,9 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (12.3.2)
     redis (3.3.5)
+    responders (2.4.1)
+      actionpack (>= 4.2.0, < 6.0)
+      railties (>= 4.2.0, < 6.0)
     sidekiq (4.2.10)
       concurrent-ruby (~> 1.0)
       connection_pool (~> 2.2, >= 2.2.0)
@@ -109,6 +124,8 @@ GEM
       thread_safe (~> 0.1)
     tzinfo-data (1.2019.1)
       tzinfo (>= 1.0.0)
+    warden (1.2.8)
+      rack (>= 2.0.6)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
@@ -118,8 +135,11 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  devise
+  devise_token_auth
   fast_jsonapi
   mysql2 (~> 0.3.18)
+  pg
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
   sidekiq (~> 4.1, >= 4.1.2)

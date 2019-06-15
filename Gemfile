@@ -5,13 +5,15 @@ source 'https://rubygems.org'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
-gem 'mysql2', '~> 0.3.18'
 
 gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 
 gem 'fast_jsonapi'
+
+gem 'devise'
+gem 'devise_token_auth'
 
 gem 'sidekiq', '~> 4.1', '>= 4.1.2'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -28,6 +30,7 @@ gem 'sidekiq', '~> 4.1', '>= 4.1.2'
 # gem 'rack-cors'
 
 group :development, :test do
+  gem 'mysql2', '~> 0.3.18'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 end
