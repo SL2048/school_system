@@ -15,7 +15,7 @@ gem 'fast_jsonapi'
 gem 'devise'
 gem 'devise_token_auth'
 
-gem 'sidekiq', '~> 4.1', '>= 4.1.2'
+gem 'sidekiq', '~> 6.4'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
